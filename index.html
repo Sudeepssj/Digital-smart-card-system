@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +7,15 @@
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen flex flex-col font-[Poppins] pb-24">
 
   <!-- HEADER -->
-  <header class="text-center text-xs text-gray-500 py-4 tracking-wider">
+  <header class="text-center text-xs text-gray-500 py-4 tracking-widest">
     ✦ DIGITAL CARD
   </header>
 
@@ -30,31 +31,31 @@
         <img src="assets/images/sudeep image.jpeg"
           class="w-28 h-28 rounded-full mx-auto border-4 border-purple-500 shadow-lg mb-4">
 
-        <h1 class="text-2xl font-bold">Sudeep Singh</h1>
-        <p class="text-gray-400 text-sm mb-5">Django Developer | Designer</p>
+        <h1 class="text-2xl font-semibold">Sudeep Singh</h1>
+        <p class="text-gray-400 text-sm mb-6">Django Developer | Designer</p>
 
-        <!-- WHATSAPP (PRIMARY) -->
+        <!-- PRIMARY -->
         <a href="https://wa.me/917907318517" target="_blank"
-          class="block w-full py-3 mb-3 rounded-xl bg-gradient-to-r from-purple-500 to-indigo-600 font-semibold shadow-lg hover:scale-105 transition">
+          class="block w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 transition font-medium shadow-md mb-4">
           💬 Chat on WhatsApp
         </a>
 
-        <!-- CALL + EMAIL -->
-        <div class="flex justify-center gap-3 mb-4">
+        <!-- SECONDARY -->
+        <div class="flex gap-3 mb-5">
           <a href="tel:+917907318517"
-            class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition text-sm">
+            class="flex-1 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition text-sm">
             📞 Call
           </a>
 
           <a href="mailto:sudeepsj7907@gmail.com"
-            class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition text-sm">
+            class="flex-1 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition text-sm">
             ✉️ Email
           </a>
         </div>
 
         <!-- COPY -->
         <button onclick="copyNumber()"
-          class="px-3 py-1 rounded text-xs bg-white/5 text-gray-400">
+          class="text-xs text-gray-400 hover:text-white transition">
           📋 Copy Number
         </button>
 
@@ -62,9 +63,9 @@
           Number copied!
         </p>
 
-        <!-- SAVE CONTACT -->
+        <!-- SAVE -->
         <a href="assets/contact/sudeep.vcf" download
-          class="mt-3 block px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 hover:scale-105 transition text-sm shadow-md">
+          class="mt-4 block w-full py-2 rounded-lg border border-purple-500 text-purple-400 hover:bg-purple-500/10 transition text-sm">
           📲 Save Contact
         </a>
 
@@ -73,44 +74,71 @@
         </p>
 
         <!-- ABOUT -->
-        <div class="mt-6">
-          <h2 class="text-lg font-semibold mb-2">About Me</h2>
-          <p class="text-gray-400 text-sm">
-            I build modern, scalable websites using Django and clean UI design to help businesses grow online.
+        <div class="mt-8 text-left">
+          <h2 class="text-lg font-medium mb-2">About Me</h2>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            I help businesses and individuals build a strong online presence through fast,
+            scalable, and user-friendly web solutions using Django.
           </p>
         </div>
 
         <!-- SERVICES -->
-        <div class="mt-6">
-          <h2 class="text-lg font-semibold mb-3">Services</h2>
+        <div class="mt-8 text-left">
+          <h2 class="text-lg font-medium mb-4">Services</h2>
 
-          <div class="grid grid-cols-2 gap-3 text-sm">
-            <div class="bg-white/10 p-3 rounded-xl hover:bg-purple-500/20 transition">🌐 Django Websites</div>
-            <div class="bg-white/10 p-3 rounded-xl hover:bg-purple-500/20 transition">⚙️ Backend Dev</div>
-            <div class="bg-white/10 p-3 rounded-xl hover:bg-purple-500/20 transition">📊 Admin Panels</div>
-            <div class="bg-white/10 p-3 rounded-xl hover:bg-purple-500/20 transition">🚀 Deployment</div>
+          <div class="space-y-3 text-sm">
+
+            <div class="bg-white/10 p-3 rounded-xl flex items-center gap-2">
+              🌐 <span>Django Websites</span>
+            </div>
+
+            <div class="bg-white/10 p-3 rounded-xl flex items-center gap-2">
+              ⚙️ <span>Backend Development</span>
+            </div>
+
+            <div class="bg-white/10 p-3 rounded-xl flex items-center gap-2">
+              📊 <span>Admin Panels</span>
+            </div>
+
+            <div class="bg-white/10 p-3 rounded-xl flex items-center gap-2">
+              🚀 <span>Deployment</span>
+            </div>
+
           </div>
         </div>
 
         <!-- SOCIAL -->
-        <div class="mt-6">
-          <h2 class="text-lg font-semibold mb-3">Connect</h2>
+        <div class="mt-8 text-left">
+          <h2 class="text-lg font-medium mb-4">Connect</h2>
 
-          <div class="flex justify-center gap-3">
-            <a href="https://www.instagram.com/sudeep_s_j_?igsh=NndlcnY5anZ6ZXoy" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-pink-500 transition text-sm">Instagram</a>
-            <a href="https://linkedin.com/in/sudeep-singh-jadoun-7338072b3/" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-blue-600 transition text-sm">LinkedIn</a>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/sudeep_s_j_?igsh=NndlcnY5anZ6ZXoy"
+              class="flex-1 text-center py-2 rounded-lg bg-white/10 hover:bg-purple-500/20 transition text-sm">
+              Instagram
+            </a>
+
+            <a href="https://linkedin.com/in/sudeep-singh-jadoun-7338072b3/"
+              class="flex-1 text-center py-2 rounded-lg bg-white/10 hover:bg-purple-500/20 transition text-sm">
+              LinkedIn
+            </a>
           </div>
         </div>
 
         <!-- LOCATION -->
-        <div class="mt-6">
-          <h2 class="text-lg font-semibold mb-3">Location</h2>
+        <div class="mt-8 text-left">
+          <h2 class="text-lg font-medium mb-3">Location</h2>
 
           <iframe
-            src="https://maps.google.com/maps?q=kochi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            class="w-full h-36 rounded-xl border border-white/10">
+            src="https://maps.google.com/maps?q=Beypore%20Kozhikode&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            class="w-full h-28 rounded-xl border border-white/10 opacity-90">
           </iframe>
+
+          <a href="https://maps.google.com/?q=Beypore,Kozhikode" target="_blank"
+            class="mt-3 mx-auto px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-xs flex items-center justify-center gap-1 w-fit transition">
+            📍 Open in Maps
+          </a>
         </div>
+
       </div>
 
     </div>
@@ -118,25 +146,17 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="text-center text-xs text-gray-500 py-4 space-y-1">
-    <p>© 2026 Sudeep Singh</p>
-    <p>
-      <a href="#" class="hover:text-purple-400 transition">
-        Powered by Sudeep Digital
-      </a>
-    </p>
+  <footer class="text-center text-xs text-gray-500 py-4">
+    © 2026 Sudeep Singh
   </footer>
 
-  <!-- FLOATING WHATSAPP -->
+  <!-- FLOATING -->
   <a href="https://wa.me/917907318517" target="_blank"
-    class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition">
+    class="fixed bottom-6 right-4 bg-green-500 p-3 rounded-full shadow-lg z-50 hover:scale-110 transition">
     💬
   </a>
 
-  <!-- JS -->
   <script src="js/style.js"></script>
 
 </body>
 </html>
-
-
