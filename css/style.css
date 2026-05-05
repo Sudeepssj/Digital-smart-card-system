@@ -1,0 +1,137 @@
+body {
+  background: radial-gradient(circle at top, #0a0a15, #05050a);
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* BUTTONS */
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #22c55e, #3b82f6);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(34,197,94,0.4);
+}
+
+.secondary-btn {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+}
+
+.copy-btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+}
+
+.save-btn {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+}
+
+.save-btn:hover {
+  background: linear-gradient(to right, rgba(34,197,94,0.15), rgba(59,130,246,0.15));
+}
+
+/* SECTION */
+.section {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+/* SERVICE CARD */
+.service-card {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  align-items: flex-start;
+}
+
+.service-card:hover {
+  background: linear-gradient(to right, rgba(34,197,94,0.15), rgba(59,130,246,0.15));
+  border: 1px solid rgba(34,197,94,0.3);
+  box-shadow: 0 0 20px rgba(34,197,94,0.25);
+  transform: translateY(-2px);
+}
+
+.service-card i {
+  font-size: 16px;
+  color: #d1d5db;
+}
+
+.service-card p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.service-card span {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* CONNECT */
+.connect-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+}
+
+.connect-btn:hover {
+  background: linear-gradient(to right, rgba(34,197,94,0.15), rgba(59,130,246,0.15));
+}
+
+/* FLOAT */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #22c55e;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(34,197,94,0.5);
+}
+
+.card-hover:hover {
+  background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(59,130,246,0.15));
+  box-shadow: 0 0 20px rgba(34,197,94,0.25);
+}
