@@ -52,3 +52,28 @@ function downloadPDF() {
   pdf.addImage(imgData, "PNG", 30, 40, 150, 150);
   pdf.save("sudeep-qr.pdf");
 }
+
+
+// SHARE PROFILE
+
+function shareProfile() {
+
+  if (navigator.share) {
+
+    navigator.share({
+      title: "Sudeep Singh — Django Developer",
+      text: "Check out my digital card",
+      url: "https://smartcard7907.netlify.app"
+    });
+
+  } else {
+
+    navigator.clipboard.writeText(
+      "https://smartcard7907.netlify.app"
+    );
+
+    alert("Profile link copied!");
+
+  }
+
+}

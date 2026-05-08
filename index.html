@@ -43,6 +43,92 @@ body {
   background: rgba(255,255,255,0.08);
   transform: translateY(-2px);
 }
+/* GLOWING LOCATION PIN */
+
+.pin-glow {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow:
+    0 0 10px #22c55e,
+    0 0 25px #22c55e,
+    0 0 45px #22c55e;
+  animation: pulseGlow 2s infinite;
+}
+.map-card img {
+  transition: 0.5s ease;
+}
+
+.map-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ANIMATION */
+
+@keyframes pulseGlow {
+
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+/* SOCIAL ICONS */
+
+.social-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(15,23,42,0.7);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+
+  transition: all 0.3s ease;
+}
+
+/* ICON SIZE */
+
+.social-icon i {
+  font-size: 20px;
+}
+
+/* HOVER */
+
+.social-icon:hover {
+
+  transform: translateY(-4px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(34,197,94,0.15),
+      rgba(59,130,246,0.15)
+    );
+
+  border-color: rgba(34,197,94,0.4);
+
+  box-shadow:
+    0 0 20px rgba(34,197,94,0.25);
+
+}
 </style>
 
 </head>
@@ -197,51 +283,117 @@ I help businesses and individuals build a strong online presence through fast, s
 </div>
 
 <!-- CONNECT -->
-<div class="mt-6 text-left glass-border">
-<div class="glass-inner p-4">
+<!-- CONNECT -->
+<div class="mt-6 text-center">
 
-<div class="flex items-center gap-2 mb-3 text-gray-300">
-<i class="fa-solid fa-link"></i>
-<span class="text-sm font-medium">Connect</span>
-</div>
+  <!-- TITLE -->
+  <div class="flex items-center justify-center gap-2 mb-5 text-gray-300">
+    <i class="fa-solid fa-link text-green-400"></i>
+    <span class="text-sm font-medium text-white">
+      Connect
+    </span>
+  </div>
 
-<div class="grid grid-cols-2 gap-3">
+  <!-- ICON ROW -->
+  <div class="flex items-center justify-center gap-4 flex-wrap">
 
-<a href="https://www.instagram.com/sudeep_s_j_?igsh=NndlcnY5anZ6ZXoy" target="_blank"
-class="py-2 rounded-lg bg-gray-900/60 border border-gray-800 hover:border-green-400/40 text-sm flex items-center justify-center gap-2">
-<i class="fa-brands fa-instagram text-pink-500"></i> Instagram
-</a>
+    <!-- INSTAGRAM -->
+    <a href="https://www.instagram.com/sudeep_s_j_?igsh=NndlcnY5anZ6ZXoy"
+      target="_blank"
+      class="social-icon">
 
-<a href="https://linkedin.com/in/sudeep-singh-jadoun-7338072b3/" target="_blank"
-class="py-2 rounded-lg bg-gray-900/60 border border-gray-800 hover:border-green-400/40 text-sm flex items-center justify-center gap-2">
-<i class="fa-brands fa-linkedin text-blue-500"></i> LinkedIn
-</a>
+      <i class="fa-brands fa-instagram text-pink-500"></i>
 
-</div>
+    </a>
 
-</div>
+    <!-- LINKEDIN -->
+    <a href="https://linkedin.com/in/sudeep-singh-jadoun-7338072b3/"
+      target="_blank"
+      class="social-icon">
+
+      <i class="fa-brands fa-linkedin-in text-blue-500"></i>
+
+    </a>
+
+    <!-- GITHUB -->
+    <a href="https://github.com/Sudeepssj"
+      target="_blank"
+      class="social-icon">
+
+      <i class="fa-brands fa-github text-white"></i>
+
+    </a>
+
+    <!-- FACEBOOK -->
+    <a href="https://www.facebook.com/profile.php?id=100084044112023"
+      target="_blank"
+      class="social-icon">
+
+      <i class="fa-brands fa-facebook-f text-blue-400"></i>
+
+    </a>
+
+  </div>
+
 </div>
 
 <!-- LOCATION -->
-<div class="mt-6 text-left glass-border">
-<div class="glass-inner p-4">
+<div class="mt-6 text-left">
 
-<div class="flex items-center gap-2 mb-3 text-gray-300">
-<i class="fa-solid fa-location-dot"></i>
-<span class="text-sm font-medium">Location</span>
-</div>
+  <!-- TITLE -->
+  <div class="flex items-center gap-2 mb-3 text-gray-300">
+    <i class="fa-solid fa-location-dot text-green-400"></i>
+    <span class="text-sm font-medium text-white">Location</span>
+  </div>
 
-<iframe
-src="https://maps.google.com/maps?q=Beypore%20Kozhikode&t=&z=13&ie=UTF8&iwloc=&output=embed"
-class="w-full h-32 rounded-xl border border-white/10">
-</iframe>
+  <!-- LOCATION CARD -->
+  <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-[#07111f]">
 
-<a href="https://maps.google.com/?q=Beypore%20Kozhikode" target="_blank"
-class="block text-center mt-3 text-sm text-gray-400 hover:underline">
-Open in Google Maps
-</a>
+    <!-- DARK MAP IMAGE -->
+    <img src="assets/images/map-dark.png"
+      class="w-full h-56 object-cover opacity-80">
 
-</div>
+    <!-- DARK OVERLAY -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+    <!-- GLOWING PIN -->
+    <div class="absolute inset-0 flex items-center justify-center">
+
+      <div class="flex flex-col items-center">
+
+        <div class="pin-glow"></div>
+
+        <div class="mt-3 text-center">
+          <p class="text-white font-semibold text-lg">
+            Beypore
+          </p>
+
+          <p class="text-gray-300 text-sm">
+            Kozhikode, Kerala
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="absolute bottom-4 left-4 right-4">
+
+      <a href="https://maps.google.com/?q=Beypore,Kozhikode"
+        target="_blank"
+        class="flex items-center justify-center gap-2 py-3 rounded-xl bg-black/50 backdrop-blur-md border border-white/10 text-white hover:border-green-400/40 hover:bg-green-500/10 transition">
+
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+        Open in Google Maps
+
+      </a>
+
+    </div>
+
+  </div>
+
 </div>
 
 </div>
@@ -255,10 +407,27 @@ Open in Google Maps
 </footer>
 
 <!-- FLOATING -->
-<a href="https://wa.me/917907318517" target="_blank"
-class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition">
-<i class="fa-brands fa-whatsapp text-white text-lg"></i>
-</a>
+<!-- FLOATING ACTIONS -->
+<div class="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
+
+  <!-- SHARE BUTTON -->
+  <button onclick="shareProfile()"
+    class="floating-share">
+
+    <i class="fa-solid fa-share-nodes"></i>
+
+  </button>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/917907318517"
+    target="_blank"
+    class="floating-whatsapp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+</div>
 
 <script src="js/style.js"></script>
 <!-- QR MODAL -->
