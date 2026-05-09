@@ -196,10 +196,6 @@ Number copied!
 class="mt-4 block py-2 rounded-xl border border-green-400/60 text-green-400 hover:bg-green-400/10 transition">
 <i class="fa-solid fa-download mr-1"></i> Save Contact
 </a>
-<button onclick="openQR()"
-class="mt-3 w-full py-2 rounded-xl bg-white/5 hover:bg-white/10 text-sm transition">
-<i class="fa-solid fa-qrcode mr-2"></i> Show QR
-</button>
 <p class="text-xs text-gray-500 mt-2">
 Best experienced on mobile
 </p>
@@ -406,17 +402,47 @@ I help businesses and individuals build a strong online presence through fast, s
 © 2026 Sudeep Singh
 </footer>
 
-<!-- FLOATING -->
+
 <!-- FLOATING ACTIONS -->
 <div class="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
 
-  <!-- SHARE BUTTON -->
-  <button onclick="shareProfile()"
-    class="floating-share">
+  <!-- SHARE HUB -->
 
-    <i class="fa-solid fa-share-nodes"></i>
+  <div class="relative">
 
-  </button>
+    <!-- SHARE TOGGLE -->
+    <button id="shareToggle" onclick="toggleShareMenu()"
+      class="floating-share">
+
+      <i class="fa-solid fa-share-nodes"></i>
+
+    </button>
+
+    <!-- SHARE MENU -->
+    <div id="shareMenu" onclick="event.stopPropagation()"
+      class="share-menu hidden">
+
+      <!-- SHARE PROFILE -->
+      <button onclick="shareProfile()" class="share-item">
+        <i class="fa-solid fa-paper-plane"></i>
+        <span>Share Profile</span>
+      </button>
+
+      <!-- SHOW QR -->
+      <button onclick="openQR()" class="share-item">
+        <i class="fa-solid fa-qrcode"></i>
+        <span>Show QR</span>
+      </button>
+
+      <!-- COPY LINK -->
+      <button onclick="copyProfileLink()" class="share-item">
+        <i class="fa-solid fa-link"></i>
+        <span>Copy Link</span>
+      </button>
+
+  </div>
+
+</div>
 
   <!-- WHATSAPP -->
   <a href="https://wa.me/917907318517"
@@ -431,25 +457,35 @@ I help businesses and individuals build a strong online presence through fast, s
 
 <script src="js/style.js"></script>
 <!-- QR MODAL -->
-<div id="qrModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+<div id="qrModal" onclick="outsideClose(event)" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
 
-  <div class="bg-gray-900 p-6 rounded-2xl w-80 text-center border border-green-400/30">
+  <div class="bg-gray-900 p-6 rounded-2x w-[340px] text-center border border-green-400/30">
 
     <h2 class="text-lg mb-4 font-medium">Scan QR</h2>
 
     <div id="qrcode" class="flex justify-center mb-4"></div>
 
     <!-- BUTTONS -->
-    <div class="flex gap-2">
+    <div class="flex flex-col gap-3">
 
       <button onclick="downloadQR()"
-        class="flex-1 py-2 bg-green-500 rounded-lg text-sm hover:bg-green-600">
+        class="w-full py-3 rounded-xl
+        bg-gradient-to-r from-green-500 to-blue-500
+        text-white font-medium
+        hover:opacity-90 transition">
         PNG
       </button>
 
-      <button onclick="downloadPDF()"
-        class="flex-1 py-2 bg-blue-500 rounded-lg text-sm hover:bg-blue-600">
-        PDF
+      <button onclick="shareQR()"
+        class="w-full py-3 rounded-xl
+        bg-white/5 border border-white/10
+        hover:border-green-400/40
+        transition flex items-center justify-center gap-2">
+
+        <i class="fa-solid fa-share-nodes"></i>
+
+        Share QR
+
       </button>
 
     </div>
