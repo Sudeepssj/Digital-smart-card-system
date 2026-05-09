@@ -416,3 +416,43 @@ body {
   }
 
 }
+
+/* =========================
+   PAGE TRANSITION
+========================= */
+
+.page-hidden main,
+.page-hidden footer,
+.page-hidden .floating-share,
+.page-hidden .floating-whatsapp {
+
+  opacity: 0;
+
+  transform:
+    translateY(18px);
+
+  filter:
+    blur(8px);
+
+}
+
+/* ACTIVE */
+
+.page-loaded main,
+.page-loaded footer,
+.page-loaded .floating-share,
+.page-loaded .floating-whatsapp {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+  filter:
+    blur(0);
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease,
+    filter 1s ease;
+}

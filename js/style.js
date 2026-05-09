@@ -187,16 +187,23 @@ document.addEventListener("click", function(event) {
 
 });
 
-// PREMIUM LOADER
+// PREMIUM LOADER + PAGE TRANSITION
 
 window.addEventListener("load", () => {
 
   const loader =
     document.getElementById("loader");
 
+  // PAGE LOAD
   setTimeout(() => {
 
+    // HIDE LOADER
     loader.classList.add("hide");
+
+    // SHOW PAGE
+    document.body.classList.remove("page-hidden");
+
+    document.body.classList.add("page-loaded");
 
   }, 1200);
 
