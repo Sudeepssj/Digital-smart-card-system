@@ -21,7 +21,7 @@ function openQR() {
   qrContainer.innerHTML = "";
 
   new QRCode(qrContainer, {
-    text: "https://smartcard7907.netlify.app",
+    text: "https://smartcard7907.netlify.app/?v=2ho",
     width: 180,
     height: 180
   });
@@ -63,13 +63,13 @@ function shareProfile() {
     navigator.share({
       title: "Sudeep Singh — Django Developer",
       text: "Check out my digital card",
-      url: "https://smartcard7907.netlify.app"
+      url: "https://smartcard7907.netlify.app/?v=2ho"
     });
 
   } else {
 
     navigator.clipboard.writeText(
-      "https://smartcard7907.netlify.app"
+      "https://smartcard7907.netlify.app/?v=2ho"
     );
 
     alert("Profile link copied!");
@@ -93,7 +93,7 @@ function toggleShareMenu() {
 function copyProfileLink() {
 
   navigator.clipboard.writeText(
-    "https://smartcard7907.netlify.app"
+    "https://smartcard7907.netlify.app/?v=2ho"
   );
 
   alert("Profile link copied!");
