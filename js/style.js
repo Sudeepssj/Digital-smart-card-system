@@ -208,3 +208,32 @@ window.addEventListener("load", () => {
   }, 1200);
 
 });
+
+// AUTO TOOLTIP SHOW
+
+window.addEventListener("load", () => {
+
+  const tooltip =
+    document.querySelector(".whatsapp-tooltip");
+
+  // SHOW
+  setTimeout(() => {
+
+    tooltip.style.opacity = "1";
+
+    tooltip.style.transform =
+      "translateY(0)";
+
+  }, 2500);
+
+  // HIDE
+  setTimeout(() => {
+
+    tooltip.style.opacity = "0";
+
+    tooltip.style.transform =
+      "translateY(6px)";
+
+  }, 6500);
+
+});
